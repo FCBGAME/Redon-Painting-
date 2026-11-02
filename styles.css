@@ -166,7 +166,7 @@ p { margin: 0 0 1rem; }
 .chips li:nth-child(odd) { border-color: var(--red); color: var(--red-dark); }
 
 /* Reviews */
-.reviews { padding: clamp(3rem, 7vw, 5rem) 0 0; }
+.reviews { padding: clamp(3rem, 7vw, 5rem) 0 2rem; }
 .review .stars { color: var(--red); letter-spacing: .15em; font-size: 1.1rem; margin-bottom: .6rem; }
 .review blockquote { margin: 0 0 1rem; font-family: var(--serif); font-size: 1.15rem; line-height: 1.4; }
 .review .who { font-weight: 700; font-size: .95rem; color: var(--muted); }
@@ -249,6 +249,6 @@ p { margin: 0 0 1rem; }
 .dots[hidden] { display: none; }
 .dots span { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
 .dots span.on { background: var(--red); }
-.review-cta { margin-top: 1.8rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; padding: 1.4rem 1.6rem; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); }
+.review-cta { margin-top: 2rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; padding: 1.4rem 1.6rem; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); }
 .review-cta p { margin: 0; font-weight: 700; flex: 1 1 260px; }
 @media (max-width: 760px) { .car-btn { display: none !important; } }
