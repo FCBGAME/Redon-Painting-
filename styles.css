@@ -233,4 +233,3 @@ p { margin: 0 0 1rem; }
 .legal h2 { font-size: 1.5rem; margin: 2rem 0 .5rem; }
 .legal p, .legal li { max-width: 65ch; }
 .legal .updated { color: var(--muted); }
-.se-note { margin-top: .6rem; }
