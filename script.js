@@ -13,7 +13,7 @@
       text: 'Highly recommend Albert for any home painting projects! They recently painted the whole house of our home, and the results are incredible. From start to finish, the experience was smooth and stress-free. The attention to detail and clean lines are top-notch.'
     },
     {
-      name: 'Jade A.', rating: 5, source: 'Facebook review',
+      name: 'Jade A.', suburb: 'Berwick', rating: 5, source: 'Facebook review',
       text: 'We\u2019ve had a fantastic experience with Albert and would highly recommend Redon Painting! Albert is professional, reliable, hardworking and takes great pride in his work. His attention to detail and quality of workmanship are excellent. Am extremely happy with the results and wouldn\u2019t hesitate to use his services again. Highly recommend!'
     }
   ];
