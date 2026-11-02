@@ -93,6 +93,15 @@
   var form = document.getElementById('quote-form');
   var statusEl = document.getElementById('form-status');
   var photos = document.getElementById('photos');
+  var thanks = document.getElementById('form-thanks');
+  var again = document.getElementById('thanks-again');
+  if (again && thanks && form) {
+    again.addEventListener('click', function () {
+      thanks.hidden = true;
+      form.hidden = false;
+      form.elements['name'].focus();
+    });
+  }
   var MAX_FILES = 3;
   var MAX_MB = 5;
 
@@ -147,8 +156,19 @@
       }).then(function (res) {
         btn.disabled = false;
         if (res && res.success) {
+          var first = (form.elements['name'].value || '').trim().split(/\s+/)[0];
           form.reset();
-          setStatus('Thanks! We have your request and will be in touch soon.', 'ok');
+          setStatus('');
+          if (thanks) {
+            document.getElementById('thanks-title').textContent =
+              first ? 'Thanks, ' + first + '! We got your request.' : 'Thanks, we got your request!';
+            form.hidden = true;
+            thanks.hidden = false;
+            thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            thanks.focus({ preventScroll: true });
+          } else {
+            setStatus('Thanks! We have your request and will be in touch soon.', 'ok');
+          }
         } else {
           setStatus('Sorry, something went wrong. Please call us on 0413 818 803.', 'err');
         }

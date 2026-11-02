@@ -252,3 +252,13 @@ p { margin: 0 0 1rem; }
 .review-cta { margin-top: 2rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; padding: 1.4rem 1.6rem; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); }
 .review-cta p { margin: 0; font-weight: 700; flex: 1 1 260px; }
 @media (max-width: 760px) { .car-btn { display: none !important; } }
+
+/* Form thank-you */
+.thanks { text-align: center; padding-block: clamp(2.2rem, 6vw, 3.6rem); }
+.thanks[hidden], .form[hidden] { display: none; }
+.thanks:focus { outline: none; }
+.thanks-tick { color: #1d7a3a; margin: 0 auto 1rem; display: block; }
+.thanks h3 { font-size: clamp(1.6rem, 4vw, 2.1rem); margin-bottom: .6rem; }
+.thanks p { color: var(--muted); max-width: 40ch; margin: 0 auto 1.4rem; }
+.btn-ghost-dark { background: transparent; color: var(--ink); border: 2px solid var(--ink); }
+.btn-ghost-dark:hover { background: var(--ink); color: #fff; }
