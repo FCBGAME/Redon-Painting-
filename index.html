@@ -7,14 +7,19 @@
   <meta name="description" content="Redon Painting offers residential and commercial painting, plastering and drywall across all of Melbourne. Interior, exterior, fence and deck painting. Call 0413 818 803 or request a quote online.">
   <meta name="theme-color" content="#1c2030">
 
+  <link rel="canonical" href="https://redonpainting.com.au/">
+
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://redonpainting.com.au/">
+  <meta property="og:site_name" content="Redon Painting">
   <meta property="og:title" content="Redon Painting | Painters in Melbourne">
   <meta property="og:description" content="Residential and commercial painting, plastering and drywall across Melbourne. Request a quote online or call 0413 818 803.">
   <meta property="og:locale" content="en_AU">
-  <meta property="og:image" content="https://redon-painting.vercel.app/og-image.jpg">
+  <meta property="og:image" content="https://redonpainting.com.au/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://redonpainting.com.au/og-image.jpg">
 
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -30,10 +35,69 @@
     "@type": "HousePainter",
     "name": "Redon Painting",
     "description": "Residential and commercial painting, plastering and drywall services in Melbourne.",
+    "url": "https://redonpainting.com.au/",
+    "email": "info@redonpainting.com.au",
+    "image": "https://redonpainting.com.au/og-image.jpg",
     "telephone": "+61413818803",
     "areaServed": { "@type": "City", "name": "Melbourne" },
     "address": { "@type": "PostalAddress", "addressLocality": "Melbourne", "addressRegion": "VIC", "addressCountry": "AU" },
     "sameAs": ["https://www.facebook.com/share/1cjH9V4v72/"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I get a quote?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fill in the short quote form on this page or call us on 0413 818 803. Tell us about the job, and we will get back to you to talk it through and provide a quote. Photos are welcome but optional."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work across all of Melbourne?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We are happy to work all around Melbourne, from the inner city to the outer suburbs. Just tell us your suburb when you get in touch."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you paint both homes and businesses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We do residential painting for homes, units and townhouses, and commercial painting for offices, shops and other business spaces."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What services do you offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Interior and exterior painting, plastering, drywall, fence painting, and deck painting and staining."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I send photos of the job?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The quote form lets you add up to 3 photos. They are optional, but they help us understand the job before we call you back."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long will my job take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on the size of the job and the preparation needed. When we talk through the work with you, we will give you an idea of timing."
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -50,6 +114,7 @@
         <a href="#about">About</a>
         <a href="#reviews" id="nav-reviews" hidden>Reviews</a>
         <a href="#process">How it works</a>
+        <a href="#faq">FAQ</a>
         <a href="#quote">Get a quote</a>
         <a class="btn btn-call" href="tel:+61413818803">Call 0413 818 803</a>
       </nav>
@@ -189,6 +254,39 @@
       </div>
     </section>
 
+    <section class="faq wrap" id="faq">
+      <div class="section-head">
+        <p class="eyebrow eyebrow-red">Good to know</p>
+        <h2>Common questions</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>How do I get a quote?</summary>
+          <p>Fill in the short quote form on this page or call us on 0413 818 803. Tell us about the job, and we will get back to you to talk it through and provide a quote. Photos are welcome but optional.</p>
+        </details>
+        <details>
+          <summary>Do you work across all of Melbourne?</summary>
+          <p>Yes. We are happy to work all around Melbourne, from the inner city to the outer suburbs. Just tell us your suburb when you get in touch.</p>
+        </details>
+        <details>
+          <summary>Do you paint both homes and businesses?</summary>
+          <p>Yes. We do residential painting for homes, units and townhouses, and commercial painting for offices, shops and other business spaces.</p>
+        </details>
+        <details>
+          <summary>What services do you offer?</summary>
+          <p>Interior and exterior painting, plastering, drywall, fence painting, and deck painting and staining.</p>
+        </details>
+        <details>
+          <summary>Can I send photos of the job?</summary>
+          <p>Yes. The quote form lets you add up to 3 photos. They are optional, but they help us understand the job before we call you back.</p>
+        </details>
+        <details>
+          <summary>How long will my job take?</summary>
+          <p>It depends on the size of the job and the preparation needed. When we talk through the work with you, we will give you an idea of timing.</p>
+        </details>
+      </div>
+    </section>
+
     <section class="quote wrap" id="quote">
       <div class="quote-intro">
         <p class="eyebrow eyebrow-red">Let&rsquo;s talk</p>
@@ -252,7 +350,9 @@
       <img src="logo-sm.webp" alt="Redon Painting" width="120" height="86" loading="lazy">
       <div>
         <p><a href="tel:+61413818803">0413 818 803</a></p>
+        <p><a href="mailto:info@redonpainting.com.au">info@redonpainting.com.au</a></p>
         <p><a href="https://www.facebook.com/share/1cjH9V4v72/?mibextid=wwXIfr" target="_blank" rel="noopener">Find us on Facebook</a></p>
+        <p><a href="privacy">Privacy policy</a></p>
       </div>
       <p class="copy">&copy; <span id="year">2026</span> Redon Painting. Melbourne, Victoria.<br>ABN 92 757 617 981</p>
     </div>
