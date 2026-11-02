@@ -209,3 +209,8 @@ p { margin: 0 0 1rem; }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* Owner note */
+.owner-note { margin: 1.6rem 0; padding: 1.2rem 1.4rem; border-left: 4px solid var(--red); background: var(--paper); border-radius: 0 var(--radius) var(--radius) 0; }
+.owner-note h3 { font-size: 1.3rem; margin-bottom: .5rem; }
+.owner-note p { margin: 0; }
