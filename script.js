@@ -11,31 +11,62 @@
     {
       name: 'Rao B.', suburb: 'Narre Warren', rating: 5, source: 'Facebook review',
       text: 'Highly recommend Albert for any home painting projects! They recently painted the whole house of our home, and the results are incredible. From start to finish, the experience was smooth and stress-free. The attention to detail and clean lines are top-notch.'
+    },
+    {
+      name: 'Jade A.', source: 'Facebook recommendation',
+      text: 'We\u2019ve had a fantastic experience with Albert and would highly recommend Redon Painting! Albert is professional, reliable, hardworking and takes great pride in his work. His attention to detail and quality of workmanship are excellent. Am extremely happy with the results and wouldn\u2019t hesitate to use his services again. Highly recommend!'
     }
   ];
 
   var reviewSection = document.getElementById('reviews');
   var reviewList = document.getElementById('review-list');
   if (REVIEWS.length && reviewSection && reviewList) {
+    var dotsBox = document.getElementById('review-dots');
     REVIEWS.forEach(function (r) {
       var card = document.createElement('figure');
       card.className = 'review';
-      card.style.margin = '0';
-      var stars = document.createElement('div');
-      stars.className = 'stars';
-      stars.setAttribute('aria-label', (r.rating || 5) + ' out of 5 stars');
-      stars.textContent = new Array((r.rating || 5) + 1).join('\u2605');
+      var top = document.createElement('div');
+      if (r.rating) {
+        top.className = 'stars';
+        top.setAttribute('aria-label', r.rating + ' out of 5 stars');
+        top.textContent = new Array(r.rating + 1).join('\u2605');
+      } else {
+        top.className = 'recommends';
+        top.textContent = '\uD83D\uDC4D Recommends Redon Painting';
+      }
       var q = document.createElement('blockquote');
       q.textContent = '\u201C' + r.text + '\u201D';
       var who = document.createElement('figcaption');
       who.className = 'who';
       who.textContent = r.name + (r.suburb ? ', ' + r.suburb : '') + (r.source ? ' \u00B7 ' + r.source : '');
-      card.appendChild(stars); card.appendChild(q); card.appendChild(who);
+      card.appendChild(top); card.appendChild(q); card.appendChild(who);
       reviewList.appendChild(card);
+      if (dotsBox) dotsBox.appendChild(document.createElement('span'));
     });
     reviewSection.hidden = false;
     var navReviews = document.getElementById('nav-reviews');
     if (navReviews) navReviews.hidden = false;
+
+    var prev = reviewSection.querySelector('.car-prev');
+    var next = reviewSection.querySelector('.car-next');
+    var cards = reviewList.children;
+    function step() { return cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : reviewList.clientWidth; }
+    function update() {
+      var overflow = reviewList.scrollWidth > reviewList.clientWidth + 4;
+      if (prev) prev.hidden = !overflow;
+      if (next) next.hidden = !overflow;
+      if (dotsBox) dotsBox.hidden = !overflow;
+      if (!overflow) return;
+      var i = Math.round(reviewList.scrollLeft / step());
+      if (dotsBox) Array.prototype.forEach.call(dotsBox.children, function (d, n) { d.className = n === i ? 'on' : ''; });
+      if (prev) prev.disabled = reviewList.scrollLeft <= 4;
+      if (next) next.disabled = reviewList.scrollLeft + reviewList.clientWidth >= reviewList.scrollWidth - 4;
+    }
+    if (prev) prev.addEventListener('click', function () { reviewList.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    if (next) next.addEventListener('click', function () { reviewList.scrollBy({ left: step(), behavior: 'smooth' }); });
+    reviewList.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
   }
 
   // Footer year

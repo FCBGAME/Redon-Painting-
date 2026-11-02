@@ -167,8 +167,6 @@ p { margin: 0 0 1rem; }
 
 /* Reviews */
 .reviews { padding: clamp(3rem, 7vw, 5rem) 0 0; }
-.review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; }
-.review { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem; }
 .review .stars { color: var(--red); letter-spacing: .15em; font-size: 1.1rem; margin-bottom: .6rem; }
 .review blockquote { margin: 0 0 1rem; font-family: var(--serif); font-size: 1.15rem; line-height: 1.4; }
 .review .who { font-weight: 700; font-size: .95rem; color: var(--muted); }
@@ -233,3 +231,24 @@ p { margin: 0 0 1rem; }
 .legal h2 { font-size: 1.5rem; margin: 2rem 0 .5rem; }
 .legal p, .legal li { max-width: 65ch; }
 .legal .updated { color: var(--muted); }
+
+/* Reviews carousel */
+.carousel { position: relative; }
+.review-track { display: flex; gap: 1.2rem; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: .3rem 0 1rem; -webkit-overflow-scrolling: touch; }
+.review-track::-webkit-scrollbar { display: none; }
+.review-track:focus-visible { outline: 3px solid var(--red); outline-offset: 4px; border-radius: var(--radius); }
+.review { flex: 0 0 min(86%, 360px); scroll-snap-align: start; margin: 0; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem; display: flex; flex-direction: column; }
+.review blockquote { flex: 1; }
+.review .recommends { color: var(--red); font-weight: 700; font-size: .95rem; margin-bottom: .6rem; }
+.car-btn { position: absolute; top: 45%; transform: translateY(-50%); z-index: 2; width: 46px; height: 46px; border-radius: 50%; border: 0; background: var(--ink); color: #fff; font-size: 1.8rem; line-height: 1; cursor: pointer; box-shadow: 0 8px 20px -8px rgba(28,32,48,.6); }
+.car-btn[hidden] { display: none; }
+.car-btn:disabled { opacity: .35; cursor: default; }
+.car-prev { left: -12px; }
+.car-next { right: -12px; }
+.dots { display: flex; justify-content: center; gap: .5rem; margin-top: .2rem; }
+.dots[hidden] { display: none; }
+.dots span { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
+.dots span.on { background: var(--red); }
+.review-cta { margin-top: 1.8rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; padding: 1.4rem 1.6rem; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); }
+.review-cta p { margin: 0; font-weight: 700; flex: 1 1 260px; }
+@media (max-width: 760px) { .car-btn { display: none !important; } }
