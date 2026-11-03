@@ -84,7 +84,7 @@ p { margin: 0 0 1rem; }
 .stroke { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: clamp(70px, 12vw, 150px); display: block; z-index: 1; }
 
 /* Audience panels */
-.audience { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: -2.5rem; position: relative; z-index: 2; }
+.audience { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 3.5rem; position: relative; z-index: 2; }
 .panel { padding: clamp(1.6rem, 4vw, 2.6rem); border-radius: var(--radius); color: #fff; box-shadow: 0 18px 40px -22px rgba(28,32,48,.55); }
 .panel h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: .6rem; }
 .panel p { margin: 0; max-width: 28rem; opacity: .92; }
@@ -94,7 +94,7 @@ p { margin: 0 0 1rem; }
 .ico { width: 52px; height: 52px; margin-bottom: 1rem; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
 
 /* Services */
-.services { padding: clamp(4rem, 9vw, 7rem) 0 clamp(3rem, 7vw, 5rem); }
+.services { padding: clamp(3rem, 6vw, 4.5rem) 0 clamp(3rem, 7vw, 5rem); }
 .section-head { margin-bottom: 2.4rem; }
 .section-head h2 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
 .service-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: 3rem; }
@@ -189,7 +189,7 @@ p { margin: 0 0 1rem; }
   .audience, .service-list, .steps, .quote, .row, .hero-inner, .about-inner { grid-template-columns: minmax(0, 1fr); }
   .hero-photo { margin: 0 1.2rem 1.2rem 0; }
   .about-photo { margin-left: 1rem; max-width: 340px; }
-  .audience { margin-top: -2rem; }
+  .audience { margin-top: 2.5rem; }
   .copy { margin-left: 0 !important; }
   .areas { grid-template-columns: minmax(0, 1fr); }
   .mobile-only { display: block; }
