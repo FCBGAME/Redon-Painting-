@@ -262,3 +262,4 @@ p { margin: 0 0 1rem; }
 .thanks p { color: var(--muted); max-width: 40ch; margin: 0 auto 1.4rem; }
 .btn-ghost-dark { background: transparent; color: var(--ink); border: 2px solid var(--ink); }
 .btn-ghost-dark:hover { background: var(--ink); color: #fff; }
+.review-btns { display: flex; flex-wrap: wrap; gap: .7rem; }
