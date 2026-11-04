@@ -313,3 +313,9 @@ p { margin: 0 0 1rem; }
   .feat-grid, .ba-grid, .more-grid { grid-template-columns: 1fr; }
   .gal-cta { padding: 1rem 0; }
 }
+
+/* Clickable icons */
+a.svc-ico { text-decoration: none; cursor: pointer; }
+a.svc-ico:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+.ico-link { display: inline-block; line-height: 0; }
+.ico-link .ico { display: block; }
